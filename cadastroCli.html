@@ -45,32 +45,20 @@
             <a href="agendamento.html" class="btn btn-primary btn-lg clean-soft-btn" role="button">Agende seu horário</a>
         </section>
         
-        <div class="row mt-5">
-            <div class="col-md-4 mb-4">
-                <div class="card clean-soft-card h-100 shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-semibold">Qualidade</h5>
-                        <p class="card-text text-muted">Usamos apenas produtos de alta qualidade.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card clean-soft-card h-100 shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-semibold">Profissionais</h5>
-                        <p class="card-text text-muted">Equipe especializada nas últimas tendências.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card clean-soft-card h-100 shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-semibold">Inovação</h5>
-                        <p class="card-text text-muted">Sempre atualizados com as melhores técnicas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
+  <input type="text" id="nomeid" placeholder="Tiago Vale" required="required" name="nome" />
+  <label for="nome">Nome</label>
+
+  <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
+  <label for="fone">Fone</label>
+
+  <input type="email" id="emailid" placeholder="fulano@mail.com" name="email" />
+  <label for="email">Email</label>
+
+  <textarea placeholder="Deixe sua opnião"></textarea>
+
+  <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+</form>
 
     </main>
 
@@ -79,7 +67,44 @@
             <p class="mb-0 text-muted small">© 2025 Studio Totti - Todos os direitos reservados</p>
         </div>
     </footer>
-
+    <script type="module">
+        // Importa as funções principais
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-auth.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-firestore.js";
+      
+        // SUAS CONFIGURAÇÕES DO PROJETO FIREBASE AQUI
+        // Você obtém isso no Console do Firebase (Configurações do Projeto -> Seus Apps -> Web)
+        const firebaseConfig = {
+  apiKey: "AIzaSyAgZNo-qxmw5ZVYDZyGfY1VRl1X2oZtfnc",
+  authDomain: "shopp-31204.firebaseapp.com",
+  projectId: "shopp-31204",
+  storageBucket: "shopp-31204.firebasestorage.app",
+  messagingSenderId: "29785147500",
+  appId: "1:29785147500:web:079e0004c15233b5b07049",
+  measurementId: "G-MB1LYDF3EX"
+};
+      
+        // Inicializa o Firebase
+        const app = initializeApp(firebaseConfig);
+      
+        // Inicializa os serviços que você vai usar
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+      
+        // Exponha as variáveis para que seu script JS externo possa usá-las (opcional, mas comum para scripts modulares)
+        window.auth = auth;
+        window.db = db;
+        window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+        window.collection = collection;
+        window.addDoc = addDoc;
+      
+        // Lembre-se de incluir o seu arquivo JavaScript que usará essas funções.
+        // Coloque o seu script principal AQUI DENTRO ou use um `defer` e trate o escopo corretamente.
+        // Se for um arquivo JS externo, **precisa ser `type="module"` também**.
+        // <script type="module" src="seu-script.js"></script> 
+      
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>

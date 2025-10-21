@@ -1,73 +1,131 @@
-/* Estilos básicos */
+/*
+ * Arquivo: css/style.css
+ * Estilo: Clean Soft
+ */
+
+/* 1. Reset e Base para o Clean Soft */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff8f8;
-    color: #333;
-  }
+  background-color: #f8f9fa; /* Um cinza muito claro, quase branco */
+  color: #343a40; /* Texto escuro suave */
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* 2. Estilos para a Navegação (Header) */
+.clean-soft-nav {
+  background-color: #ffffff !important; /* Fundo branco puro para a navbar */
+  border-bottom: 1px solid #e9ecef; /* Linha sutil na parte inferior */
   
-  header {
-    background-color: #000;
-    color: #fff;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header h1 {
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  nav a:hover {
-    color: #f5a623;
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 5rem 2rem;
-    background: linear-gradient(to bottom right, #f5a623, #ffcc70);
-    color: #fff;
-  }
-  
-  .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 8px;
-  }
-  
-  .hero button:hover {
-    background-color: #333;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #000;
-    color: #fff;
-    font-size: 0.9rem;
-  }
-  
+}
+
+.clean-soft-brand {
+  color: #495057 !important; /* Cor suave para a marca */
+}
+
+.nav-link {
+  color: #6c757d !important; /* Cor suave para links */
+  transition: color 0.2s ease, background-color 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem; /* Bordas arredondadas nos links */
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #495057 !important;
+  background-color: #e9ecef; /* Fundo muito suave ao passar o mouse/ativo */
+}
+
+
+/* 3. Seção Hero (Destaque) */
+.clean-soft-hero {
+  background-color: #ffffff !important; 
+  border: 1px solid #dee2e6; /* Borda suave */
+  border-radius: 1rem !important; /* Mais arredondado */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra muito sutil */
+}
+
+/* 4. Botões Clean Soft */
+.clean-soft-btn {
+  background-color: #6f42c1; /* Roxo suave como cor de destaque */
+  border-color: #6f42c1;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  border-radius: 0.75rem; /* Botões arredondados */
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+}
+
+.clean-soft-btn:hover {
+  background-color: #5d35a5; 
+  border-color: #5d35a5;
+  transform: translateY(-1px); /* Efeito de elevação suave */
+}
+
+/* 5. Cartões/Componentes */
+.clean-soft-card {
+  background-color: #ffffff !important;
+  border-radius: 0.75rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.clean-soft-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important; /* Sombra um pouco maior ao passar o mouse */
+}
+
+
+/* 6. Rodapé */
+.clean-soft-footer {
+  background-color: #e9ecef !important; /* Fundo do rodapé suave */
+  color: #6c757d !important;
+  border-top: 1px solid #dee2e6;
+}
+
+/* 7. Formulários (para agendamento) */
+.form-control {
+  border-radius: 0.5rem;
+  border-color: #ced4da;
+}
+
+.form-control:focus {
+  border-color: #adb5bd;
+  box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.25); /* Sombra de foco suave (cor do botão) */
+}
+
+input, textarea {
+  width: 200px;
+  padding: 10px;
+  color: black;
+  margin-left: 20px;
+  margin-top: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid;
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus {
+  border-color: #adb5bd;
+  box-shadow: 5px 0px 9px #FFFF00;
+  font-weight: bold;
+}
+
+.enviar {
+  background-color: #66FFFF;
+  height: 40px;
+  width: 100px;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid;
+  color: black;
+}
+
+textarea {
+  width: 400px;
+  height: 120px;
+  line-height: 20px;
+  max-width: 400px;
+}
+
+form label {
+  margin-left: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
