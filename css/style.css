@@ -1,131 +1,168 @@
 /*
  * Arquivo: css/style.css
- * Estilo: Clean Soft
+ * Estilo: Clean Elegante (Luxo Sutil)
  */
 
-/* 1. Reset e Base para o Clean Soft */
+/* 1. Reset e Base para o Clean Elegante */
 body {
-  background-color: #f8f9fa; /* Um cinza muito claro, quase branco */
-  color: #343a40; /* Texto escuro suave */
-  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fcfcfc; /* Fundo branco "quente" e luxuoso */
+  color: #495057; /* Texto cinza escuro, mais suave que o preto */
+  /* Usar uma fonte serifada ou de luxo, se puder importar */
+  font-family: 'Georgia', 'Times New Roman', Times, serif; 
 }
+
+/* --- */
 
 /* 2. Estilos para a Navegação (Header) */
 .clean-soft-nav {
-  background-color: #ffffff !important; /* Fundo branco puro para a navbar */
-  border-bottom: 1px solid #e9ecef; /* Linha sutil na parte inferior */
-  
+  background-color: #ffffff !important; /* Branco nítido */
+  border-bottom: 1px solid #e9ecef; /* Linha de separação muito sutil */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03); /* Sombra para profundidade */
 }
 
 .clean-soft-brand {
-  color: #495057 !important; /* Cor suave para a marca */
+  color: #343a40 !important; /* Mais escuro para elegância */
+  letter-spacing: 1px; /* Espaçamento sutil para refinamento */
 }
 
 .nav-link {
-  color: #6c757d !important; /* Cor suave para links */
-  transition: color 0.2s ease, background-color 0.2s ease;
+  color: #868e96 !important; /* Cor mais neutra para os links */
+  transition: color 0.3s ease, background-color 0.3s ease;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem; /* Bordas arredondadas nos links */
+  border-radius: 0.3rem; /* Bordas menos arredondadas */
+  font-weight: 500;
 }
 
 .nav-link:hover, .nav-link.active {
-  color: #495057 !important;
-  background-color: #e9ecef; /* Fundo muito suave ao passar o mouse/ativo */
+  color: #343a40 !important;
+  background-color: #f8f9fa; /* Fundo muito suave ao passar o mouse */
+  /* Adiciona uma borda sutil ou sublinhado elegante para o ativo */
+  border-bottom: 2px solid #6c757d; 
 }
 
+/* --- */
 
 /* 3. Seção Hero (Destaque) */
 .clean-soft-hero {
   background-color: #ffffff !important; 
-  border: 1px solid #dee2e6; /* Borda suave */
-  border-radius: 1rem !important; /* Mais arredondado */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra muito sutil */
+  border: none; /* Remove a borda para um visual mais limpo */
+  border-radius: 0.5rem !important; /* Menos arredondado (elegância) */
+  /* Sombra mais sofisticada e espalhada */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); 
+  padding: 3rem 2rem;
 }
 
-/* 4. Botões Clean Soft */
+/* --- */
+
+/* 4. Botões Clean Elegante (Cor Principal: Azul Marinho Profundo) */
 .clean-soft-btn {
-  background-color: #6f42c1; /* Roxo suave como cor de destaque */
-  border-color: #6f42c1;
-  transition: background-color 0.3s ease, transform 0.1s ease;
-  border-radius: 0.75rem; /* Botões arredondados */
-  padding: 0.75rem 2rem;
+  background-color: #212529; /* Azul Marinho ou Preto Suave (mais elegante que o roxo) */
+  border-color: #212529;
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+  border-radius: 0.3rem; /* Botões levemente arredondados */
+  padding: 0.75rem 2.5rem; /* Um pouco mais de padding horizontal */
   font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .clean-soft-btn:hover {
-  background-color: #5d35a5; 
-  border-color: #5d35a5;
-  transform: translateY(-1px); /* Efeito de elevação suave */
+  background-color: #343a40; /* Escurece um pouco no hover */
+  border-color: #343a40;
+  transform: translateY(-2px); /* Efeito de elevação um pouco mais perceptível */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* --- */
 
 /* 5. Cartões/Componentes */
 .clean-soft-card {
   background-color: #ffffff !important;
-  border-radius: 0.75rem;
-  transition: box-shadow 0.3s ease;
+  border: 1px solid #f1f1f1; /* Borda externa quase invisível */
+  border-radius: 0.5rem; /* Levemente arredondado */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05); /* Sombra sutil para profundidade */
+  transition: box-shadow 0.3s ease, transform 0.1s ease;
 }
 
 .clean-soft-card:hover {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important; /* Sombra um pouco maior ao passar o mouse */
+  /* Sombra mais discreta e centrada */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12) !important; 
+  transform: translateY(-2px); /* Elevação sutil ao interagir */
 }
 
 
+/* --- */
+
 /* 6. Rodapé */
 .clean-soft-footer {
-  background-color: #e9ecef !important; /* Fundo do rodapé suave */
+  background-color: #f8f9fa !important; /* Fundo do rodapé suave e claro */
   color: #6c757d !important;
   border-top: 1px solid #dee2e6;
 }
 
-/* 7. Formulários (para agendamento) */
+/* --- */
+
+/* 7. Formulários (Ajustes para Elegância) */
 .form-control {
-  border-radius: 0.5rem;
-  border-color: #ced4da;
+  border-radius: 0.3rem; /* Menos arredondado */
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-control:focus {
   border-color: #adb5bd;
-  box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.25); /* Sombra de foco suave (cor do botão) */
+  /* Usa a cor do botão com baixa opacidade para um foco sutil */
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.1); 
 }
 
+/* CORREÇÃO E REFINAMENTO DOS INPUTS GENÉRICOS */
 input, textarea {
-  width: 200px;
-  padding: 10px;
-  color: black;
-  margin-left: 20px;
-  margin-top: 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border: 1px solid;
+  /* Sobrescreve estilos genéricos para usar os do Bootstrap (.form-control) */
+  /* Remove estilos antigos que estavam conflitantes */
+  width: auto; /* Deixa o Bootstrap gerenciar a largura */
+  margin-left: 0;
+  margin-top: 0;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+  border: 1px solid #ced4da; /* Garante que a borda seja padrão */
 }
 
 input:hover, textarea:hover, input:focus, textarea:focus {
+  /* Remove a sombra amarela ("#FFFF00") que não é elegante */
   border-color: #adb5bd;
-  box-shadow: 5px 0px 9px #FFFF00;
-  font-weight: bold;
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.1); 
+  font-weight: normal; /* Remove negrito no focus para um estilo mais clean */
 }
 
 .enviar {
-  background-color: #66FFFF;
-  height: 40px;
-  width: 100px;
-  font-weight: bold;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border: 1px solid;
-  color: black;
+  /* Aplica o estilo elegante do clean-soft-btn */
+  background-color: #212529; 
+  border-color: #212529;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.3rem;
+  width: 150px; /* Ajuste para o tamanho do botão */
+  height: auto;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.enviar:hover {
+  background-color: #343a40;
 }
 
 textarea {
-  width: 400px;
+  width: 100%; /* Permite que a textarea preencha o contêiner */
   height: 120px;
-  line-height: 20px;
-  max-width: 400px;
+  line-height: 1.5;
+  max-width: 100%;
 }
 
 form label {
-  margin-left: 20px;
-  color: #FFFFFF;
-  font-weight: bold;
+  /* A cor da label deve contrastar, mas manter a elegância */
+  color: #495057; 
+  font-weight: 600;
+  margin-left: 0; /* Alinha com os inputs do Bootstrap */
+  display: block; /* Garante que a label fique acima do input */
 }
